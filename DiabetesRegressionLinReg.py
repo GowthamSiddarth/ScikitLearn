@@ -14,3 +14,6 @@ regr = LinearRegression()
 regr.fit(diabetes_X_train, diabetes_y_train)
 
 print(regr.coef_)
+
+print("RMSE = ", np.mean((regr.predict(diabetes_X_test) - diabetes_y_test) ** 2))
+print("Variance score = ", regr.score(diabetes_X_test, diabetes_y_test))
