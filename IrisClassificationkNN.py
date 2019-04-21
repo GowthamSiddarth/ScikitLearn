@@ -11,3 +11,7 @@ iris_X_train, iris_y_train, iris_X_test, iris_y_test = iris_X[indices[:-10]], ir
                                                        iris_X[indices[-10:]], iris_y[indices[-10:]]
 clf = KNeighborsClassifier()
 clf.fit(iris_X_train, iris_y_train)
+
+predictions = clf.predict(iris_X_test)
+print("predictions = ", predictions)
+print("actual = ", iris_y_test)
